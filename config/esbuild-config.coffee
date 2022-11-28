@@ -1,6 +1,6 @@
 # base configuration
 
-{ coffeeScriptPlugin, sassPlugin, clean, stylusPlugin  } = require './plugins'
+{ coffeeScriptPlugin, sassPlugin, stylusPlugin  } = require './plugins'
 
 baseConfig =
   bundle: yes

@@ -1,9 +1,10 @@
 # sass-plugin: compiles sass to css
 
-sass = require 'sass'
-path = require 'node:path'
+sass          = require 'sass'
+path          = require 'node:path'
+{ errorLog }  = require '../helpers'
 
-name = 'sass-plugin'
+name          = 'sass-plugin'
 
 compileSass = (code, options) -> sass.compile code, options
 
@@ -11,7 +12,7 @@ compileSass = (code, options) -> sass.compile code, options
 sassPlugin = (onLoadResult = {}) ->
   name: name
   setup: (build) =>
-    build.onLoad { filter: /.\.(sass|scss)$/ }, (args) =>
+    build.onLoad filter: /.\.(sass|scss)$/, (args) =>
       filename = path.relative do process.cwd, args.path
       try
         contents = compileSass(filename).css
@@ -20,9 +21,7 @@ sassPlugin = (onLoadResult = {}) ->
           onLoadResult...
         }
       catch e
-        console.log "error: #{name}:"
-        console.error e
-        process.exit 1
+        errorLog(name,e)
 
 
 module.exports = sassPlugin

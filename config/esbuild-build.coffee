@@ -2,6 +2,7 @@
 
 Esbuild                       = require 'esbuild'
 { clean }                     = require './plugins'
+{ errorLog }                  = require './helpers'
 baseConfig                    = require './esbuild-config'
 { copyFileSync, readdirSync } = require 'node:fs'
 
@@ -25,9 +26,7 @@ build = ->
     process.exit 0
 
   .catch (e) =>
-    console.log "error build-config:"
-    console.error e
-    process.exit 1
+     errorLog('error build-config',e)
 
 
 module.exports = build

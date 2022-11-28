@@ -1,8 +1,9 @@
 # clean-plugin: deletes folder before begin
 
-fs = require 'node:fs'
+{ existsSync, rmSync }  = require 'node:fs'
+{ errorLog }            = require '../helpers'
 
-name = 'clean-plugin'
+name                    = 'clean-plugin'
 
 
 clean = (outdir) ->
@@ -10,11 +11,9 @@ clean = (outdir) ->
   setup: (build) =>
     try
       build.onStart =>
-        fs.rmSync outdir, recursive: yes if fs.existsSync outdir
+        rmSync outdir, recursive: yes if existsSync outdir
     catch e
-      console.log "error: #{name}:"
-      console.error e
-      process.exit 1
+      errorLog(name,e)
 
 
 module.exports = clean
