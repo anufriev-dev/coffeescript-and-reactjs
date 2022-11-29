@@ -18,8 +18,8 @@ build = ->
   }
   .then (r) =>
     # require("fs").writeFileSync("metafile.json", JSON.stringify(r.metafile))
-    paths = readdirSync process.env['PUBLIC']
-    copyFileSync "#{process.env['PUBLIC']}/#{name}", "#{process.env['BUILD']}/#{name}" for name in paths
+    paths = readdirSync process.env['PUBLIC__DIR']
+    copyFileSync "#{process.env['PUBLIC__DIR']}/#{name}", "#{process.env['BUILD']}/#{name}" for name in paths
 
   .then =>
     console.log 'It done\n\n\x1b[32m  npm run start\n\x1b[0m \tStarts the production server.\n\n'

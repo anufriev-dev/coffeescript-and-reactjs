@@ -14,7 +14,7 @@ dev = ->
   Esbuild.build {
     baseConfig...
     write: false
-    outdir: process.env['PUBLIC']
+    outdir: process.env['PUBLIC__DIR']
     watch:
       onRebuild: () =>
         emitter.emit 'refresh'
@@ -22,7 +22,7 @@ dev = ->
   .catch => process.exit 1
 
   Esbuild.serve {
-    servedir: process.env['PUBLIC']
+    servedir: process.env['PUBLIC__DIR']
   }, {
     baseConfig...
     banner:
