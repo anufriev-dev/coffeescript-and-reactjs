@@ -6,6 +6,7 @@ baseConfig =
   bundle: yes
   publicPath: '.'                             # root in outdir
   nodePaths: ['./', './src']                  # absolute import / export
+  jsx: "automatic"                            # automatic import React in every file
   resolveExtensions: ['.coffee']              # omit extension in import
   entryPoints: ['./src/main.coffee']
   entryNames : 'static/index'                 # main files in outdir
