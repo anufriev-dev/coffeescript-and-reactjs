@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "coffee ./config/esbuild.coffee dev",
     "build": "coffee ./config/esbuild.coffee build",
-    "start": "serve -s ./dist"
+    "start": "serve -s ./dist",
+    "create": "gen-component -i -st=css -e=coffee -r=src"
   },
   "dependencies": {
     "dotenv": "latest",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "coffeescript": "latest",
     "esbuild": "^0.15.15",
+    "gen-component": "latest",
     "sass": "latest",
     "stylus": "latest"
   }
