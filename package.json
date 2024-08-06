@@ -1,8 +1,10 @@
 {
   "name": "coffeescript-and-reactjs",
   "version": "0.0.0",
+  "author": "Anufriev Georgy",
+  "license": "MIT",
   "private": true,
-  "repository": "https://github.com/GeorgyDev11111/coffeescript-and-reactjs",
+  "repository": "https://github.com/anufriev-dev/coffeescript-and-reactjs",
   "scripts": {
     "dev": "coffee ./config/esbuild.coffee dev",
     "build": "coffee ./config/esbuild.coffee build",

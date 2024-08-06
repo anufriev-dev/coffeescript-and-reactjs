@@ -11,13 +11,13 @@ core: [__esbuild__](https://esbuild.github.io/)
 You can clone this repository:
 
 ```
-git clone --depth 1 https://github.com/GeorgyDev11111/coffeescript-and-reactjs.git
+git clone --depth 1 https://github.com/anufriev-dev/coffeescript-and-reactjs.git
 ```
 
 You can also install it with [__degit__](https://github.com/Rich-Harris/degit#readme)
 
 ```
-degit GeorgyDev11111/coffeescript-and-reactjs my-app
+degit anufriev-dev/coffeescript-and-reactjs my-app
 ```
 
 ## support
