@@ -12,16 +12,17 @@
     "create": "gen-component -i -st=css -e=coffee -r=src"
   },
   "dependencies": {
-    "dotenv": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "serve": "latest"
+    "dotenv": "^16.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "scheduler": "^0.23.0",
+    "serve": "^14.1.2"
   },
   "devDependencies": {
-    "coffeescript": "latest",
+    "coffeescript": "^2.7.0",
     "esbuild": "^0.15.15",
     "gen-component": "latest",
-    "sass": "latest",
-    "stylus": "latest"
+    "sass": "^1.56.1",
+    "stylus": "^0.59.0"
   }
 }
